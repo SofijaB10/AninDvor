@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restoran.css">
+    <title>Anin Dvor</title>
+</head>
+<body>
+    <h1>Dobrodošli u Anin dvor</h1>
+    <div class="topnav">
+        <ul>
+            <a href="#" class="active">Početna</a>
+            <a href="#o-nama">O nama</a>
+            <a href="#meni">Meni</a>
+            <a href="#rezervacije">Rezervacije</a>
+        </ul>
+    </div>
+    <main>
+        <!-- Sekcija O nama -->
+        <section id="o-nama"> 
+            <h2>O nama</h2>
+            <div class="sit">
+                <img src="ad.jpeg" alt="Anin dvor" class="dvor">
+                <div class="text">
+                    <p>
+                        DOBRO DOŠLI U ANIN DVOR, LOVNICA! <br>
+                        Na svega 2km udaljenosti od Šekovića, u neposrednoj blizini srednjovjekovnog manastira nalazimo se mi, etno restoran Anin Dvor.<br>
+                        Smješteni smo u prirodnom okruženju, okruženi šumom i sa potpunim ugođajem za odmor i relaksaciju.<br>
+                        U ponudi imamo brojna jela domaće, tradicionalne kuhinje, a posebno smo poznati po pastrmci iz vlastitog uzgoja.
+                    </p>
+                </div>
+            </div>
+            <div class="vit">
+                <div class="text">
+                    <p>U nastavku pogledajte video snimak našeg restorana:</p>
+                </div>
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/xdjCfbLqH9s" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sekcija Meni -->
+        <section id="meni">
+            <h2>Meni</h2>
+            <div class="search">
+                <form method="post">
+                    <input type="text" name="search" placeholder="Pretražite jela po njihovom nazivu">
+                    <button type="submit">Pretraži</button>
+                </form>
+            </div>
+            <h3>Preuzmite kartu pića:</h3>
+            <p><a href="pr.php?file=fajl.pdf">Preuzmi</a></p>
+        </section>
+
+        <!-- Sekcija Rezervacije -->
+        <section id="rezervacije">
+            <h2>Rezervacije</h2>
+            <p>Rezervišite Vaše mjesto online!</p>
+            <form method="post" action="obrada_rezervacija.php">
+                <input type="text" name="ime" placeholder="Ime" required>
+                <input type="text" name="prezime" placeholder="Prezime" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="number" name="telefon" placeholder="Broj telefona" required>
+                <input type="date" name="datum" placeholder="Datum" required>
+                <input type="time" name="vrijeme" placeholder="Vrijeme" required>
+                <input type="submit" value="Rezerviši">
+            </form>
+        </section>
+
+        <!-- Sekcija Utisci -->
+        <section>
+            <h2>Vaši utisci:</h2>
+            <form method="post">
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="message">Utisci:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                <input type="submit" value="Pošalji">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
